@@ -1,5 +1,5 @@
 ﻿using Message.Api.Models.Response;
-using Message.Data.DAL;
+using Message.Data.DAL.Repository;
 using Message.Data.Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
@@ -8,13 +8,15 @@ namespace Message.Api.Controllers
 {
     public class BaseApiController : ControllerBase
     {
-
-        private MessageContext messageContext;
-
-        public MessageContext MessageContext
+        public IUnitOfWork _UnitOfWork { get; set; }
+        public IUnitOfWork UnitOfWork
         {
-            get { return messageContext; }
-            set { messageContext = value; }
+            get
+            {
+                if (_UnitOfWork == null)
+                    _UnitOfWork = (IUnitOfWork)HttpContext.RequestServices.GetService(typeof(IUnitOfWork));
+                return _UnitOfWork;
+            }
         }
         [NonAction]
         public BaseResponse ReturnValidationError()

@@ -22,8 +22,8 @@ namespace Message.Api.Controllers
                     Password = model.Password,
                     Id = Guid.NewGuid()
                 };
-                MessageContext.ApplicationUsers.Add(user);
-                MessageContext.SaveChanges();
+                UnitOfWork.ApplicationUserRepository.Add(user);
+                UnitOfWork.Commit();
             }
             return Ok(ReturnValidationError());
         }

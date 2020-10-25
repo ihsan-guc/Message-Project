@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace Message.Api.Validation
 {
-    public class RequestValition : AbstractValidator<RegisterRequest>
+    public class RegisterValidation : AbstractValidator<RegisterRequest>
     {
-        public RequestValition(MessageContext messageContext)
+        public RegisterValidation(MessageContext messageContext)
         {
             RuleFor(p => p.UserName).NotEmpty().WithMessage("UserName Boş Olamaz");
             RuleFor(p => p.Password).NotEmpty().WithMessage("Password Boş Olamaz");

@@ -1,4 +1,7 @@
+using FluentValidation.AspNetCore;
+using Message.Api.Validation;
 using Message.Data.DAL;
+using Message.Data.DAL.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -24,7 +27,17 @@ namespace Message.Api
             services.AddDbContext<MessageContext>(opt => opt.UseSqlServer(messageDB));
             services.AddDbContext<InMemoryContext>(opt => opt.UseInMemoryDatabase("MessageInMemory"));
             services.AddScoped<MessageContext, MessageContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+
             services.AddControllers();
+
+            services.AddControllers().AddFluentValidation(fv =>
+            {
+                fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
+                fv.RegisterValidatorsFromAssemblyContaining<RegisterValidation>();
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
