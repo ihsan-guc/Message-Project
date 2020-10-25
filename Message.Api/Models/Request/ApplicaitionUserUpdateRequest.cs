@@ -1,16 +1,14 @@
 ﻿using System;
 
-namespace Message.Data.Domain.Entities
+namespace Message.Api.Models.Request
 {
-    public class ApplicationUser : BaseGuidEntity
+    public class ApplicaitionUserUpdateRequest
     {
-        public Guid? TokenId{ get; set; }
+        public Guid Id{ get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Password { get; set; }
-        public string Image { get; set; }
-        public Token Token { get; set; }
     }
 }

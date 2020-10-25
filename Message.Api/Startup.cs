@@ -2,6 +2,7 @@ using FluentValidation.AspNetCore;
 using Message.Api.Validation;
 using Message.Data.DAL;
 using Message.Data.DAL.Repository;
+using Message.Data.DAL.Repository.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,6 +30,7 @@ namespace Message.Api
             services.AddScoped<MessageContext, MessageContext>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+            services.AddScoped<ITokenRepository, TokenRepository>();
 
             services.AddControllers();
 
@@ -36,6 +38,7 @@ namespace Message.Api
             {
                 fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
                 fv.RegisterValidatorsFromAssemblyContaining<RegisterValidation>();
+                fv.RegisterValidatorsFromAssemblyContaining<ApplicationUserUpdateValidation>();
             });
 
         }

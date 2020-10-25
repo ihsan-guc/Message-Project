@@ -6,7 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Message.Data.DAL.Repository
+namespace Message.Data.DAL.Repository.Core
 {
     public class EfRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity<Guid>
     {

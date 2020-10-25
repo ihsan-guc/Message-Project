@@ -1,4 +1,5 @@
-﻿using Message.Data.Domain.Entities;
+﻿using Message.Data.DAL.Repository.Core;
+using Message.Data.Domain.Entities;
 
 namespace Message.Data.DAL.Repository
 {

@@ -1,5 +1,5 @@
 ﻿using Message.Api.Models.Response;
-using Message.Data.DAL.Repository;
+using Message.Data.DAL.Repository.Core;
 using Message.Data.Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
