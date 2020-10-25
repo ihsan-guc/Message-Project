@@ -1,9 +1,11 @@
 ﻿using Message.Api.Models.Request;
+using Message.Api.Models.Response;
 using Message.Data.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Text;
 
 namespace Message.Api.Controllers
@@ -29,12 +31,12 @@ namespace Message.Api.Controllers
                     Password = model.Password,
                     Id = Guid.NewGuid()
                 };
-                
+
                 var token = new Token()
                 {
                     Id = Guid.NewGuid(),
                     ApplicationUserId = user.Id,
-                    TokenString = Token(user.UserName,user.Email)
+                    TokenString = Token(user.UserName, user.Email)
                 };
                 user.TokenId = token.Id;
 
@@ -55,6 +57,25 @@ namespace Message.Api.Controllers
                     SecurityAlgorithms.HmacSha256Signature)
                 );
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+        /// <summary>
+        /// İstek için api/ApplicationUser/Login
+        /// </summary>
+        /// <param name="Login"></param>
+        [HttpPost]
+        [Route("login")]
+        public ActionResult<LoginResponse> Login(LoginRequest model)
+        {
+            var user = UnitOfWork.ApplicationUserRepository.GetQueryable().Where(p => p.Email == model.Email && p.Password == model.Password).FirstOrDefault();
+            if (user == null)
+                return Ok(ReturnValidationError());
+            else
+            {
+                var token = UnitOfWork.TokenRepository.GetById(user.TokenId);
+                token.TokenString = Token(user.UserName, user.Email);
+                UnitOfWork.Commit();
+                return Ok(new BaseResponse() { IsSuccess = true, Message = "Başarılı" });
+            }
         }
 
         /// <summary>

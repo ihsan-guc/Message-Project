@@ -4,7 +4,7 @@ namespace Message.Data.Domain.Entities
 {
     public class ApplicationUser : BaseGuidEntity
     {
-        public Guid? TokenId{ get; set; }
+        public Guid TokenId{ get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
         public string FirstName { get; set; }
