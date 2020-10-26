@@ -43,6 +43,7 @@ namespace Message.Api.Controllers
                 UnitOfWork.ApplicationUserRepository.Add(user);
                 UnitOfWork.TokenRepository.Add(token);
                 UnitOfWork.Commit();
+                return Ok(new RegisterResponse() { IsSuccess = true, Message = "Başarılı", Token = token.TokenString});
             }
             return Ok(ReturnValidationError());
         }
@@ -50,12 +51,13 @@ namespace Message.Api.Controllers
         public string Token(string userName, string email)
         {
             var token = new JwtSecurityToken(
-                issuer: "Test",
+                issuer: "Message Test",
                 audience: userName,
                 expires: DateTime.Now,
-                signingCredentials: new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(email)),
+                signingCredentials: new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(email + "Test Verisidir")),
                     SecurityAlgorithms.HmacSha256Signature)
                 );
+            
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
         /// <summary>
@@ -74,7 +76,8 @@ namespace Message.Api.Controllers
                 var token = UnitOfWork.TokenRepository.GetById(user.TokenId);
                 token.TokenString = Token(user.UserName, user.Email);
                 UnitOfWork.Commit();
-                return Ok(new BaseResponse() { IsSuccess = true, Message = "Başarılı" });
+                return Ok(new LoginResponse() { IsSuccess = true, Token = token.TokenString , Message = "Başarılı",
+                Email = user.Email, FirstName = user.FirstName , LastName = user.LastName, UserName = user.UserName});
             }
         }
 
@@ -95,6 +98,7 @@ namespace Message.Api.Controllers
                 user.Password = model.Password;
                 user.Email = model.Email;
                 UnitOfWork.Commit();
+                return Ok(new BaseResponse() { IsSuccess = true });
             }
             return Ok(ReturnValidationError());
         }
@@ -114,6 +118,7 @@ namespace Message.Api.Controllers
                 UnitOfWork.ApplicationUserRepository.Delete(user);
                 UnitOfWork.TokenRepository.Delete(token);
                 UnitOfWork.Commit();
+                return Ok(new BaseResponse() { IsSuccess = true ,Message = "Başarılı"});
             }
             return Ok(ReturnValidationError());
         }

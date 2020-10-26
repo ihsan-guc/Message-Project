@@ -1,6 +1,6 @@
 ﻿namespace Message.Api.Models.Response
 {
-    public class LoginResponse
+    public class LoginResponse : BaseResponse
     {
         public string Token { get; set; }
         public string UserName { get; set; }
