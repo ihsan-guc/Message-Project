@@ -197,3 +197,9 @@ C:\Users\EysanGuc\source\repos\Api\Message.Api\bin\Debug\netcoreapp3.1\Pomelo.Js
 C:\Users\EysanGuc\source\repos\Api\Message.Api\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
 C:\Users\EysanGuc\source\repos\Api\Message.Api\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
 C:\Users\EysanGuc\source\repos\Api\Message.Api\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.csprojAssemblyReference.cache
+C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.AssemblyInfoInputs.cache
+C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.AssemblyInfo.cs
+C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.csproj.CoreCompileInputs.cache
+C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.MvcApplicationPartsAssemblyInfo.cache
