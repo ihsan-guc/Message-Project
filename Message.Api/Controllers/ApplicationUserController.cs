@@ -26,7 +26,7 @@ namespace Message.Api.Controllers
         /// <summary>
         /// Kullanıcı Kayıt eder
         /// </summary>
-        /// <param name="Register"></param>
+        /// <param name="model"></param>
         /// Post: api/ApplicationUser/register
         [HttpPost]
         [Route("register")]
@@ -57,11 +57,11 @@ namespace Message.Api.Controllers
             }
             return Ok(ReturnValidationError());
         }
-        
+
         /// <summary>
         /// Kullanıcı Girişi
         /// </summary>
-        /// <param name="Login"></param>
+        /// <param name="model"></param>
         /// Post: api/ApplicationUser/login
         [HttpPost]
         [Route("login")]
@@ -96,7 +96,7 @@ namespace Message.Api.Controllers
         /// <summary>
         /// Kullanıcı Günceller
         /// </summary>
-        /// <param name="ApplicationUserUpdate"></param>
+        /// <param name="model"></param>
         /// Post: api/ApplicationUser/applicationUserUpdate
         [HttpPost]
         [Route("applicationUserUpdate")]
@@ -119,7 +119,7 @@ namespace Message.Api.Controllers
         /// <summary>
         /// Kullanıcı Siler
         /// </summary>
-        /// <param name="Delete"></param>
+        /// <param name="id"></param>
         /// Post: api/ApplicationUser/delete
         [HttpDelete]
         [Route("delete")]

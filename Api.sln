@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{46411351-F14D-4020-9D6C-9CA3917D9BA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Message.Data.Domain", "Message.Data.Domain\Message.Data.Domain.csproj", "{60417095-3C74-4054-B517-AF0DD1D9C257}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Message.Data.Domain", "Message.Data.Domain\Message.Data.Domain.csproj", "{60417095-3C74-4054-B517-AF0DD1D9C257}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Message.Data.DAL", "Message.Data.DAL\Message.Data.DAL.csproj", "{845362C6-04A7-4986-AC98-30CC4F732C81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Message.Data.DAL", "Message.Data.DAL\Message.Data.DAL.csproj", "{845362C6-04A7-4986-AC98-30CC4F732C81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{45625333-A6B7-48AF-8F8E-D21C47F482E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Message.Api", "Message.Api\Message.Api.csproj", "{D3CDD601-0DC8-4D5C-83E7-5573816B7BD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Message.Api", "Message.Api\Message.Api.csproj", "{D3CDD601-0DC8-4D5C-83E7-5573816B7BD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
