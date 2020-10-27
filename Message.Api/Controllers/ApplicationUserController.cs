@@ -1,6 +1,8 @@
-﻿using Message.Api.Models.Request;
+﻿using Message.Api.Core;
+using Message.Api.Models.Request;
 using Message.Api.Models.Response;
 using Message.Data.Domain.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -14,10 +16,18 @@ namespace Message.Api.Controllers
     [ApiController]
     public class ApplicationUserController : BaseApiController
     {
+        ITokenGenerator TokenGenerator;
+        IUploadFile UploadFile;
+        public ApplicationUserController(ITokenGenerator tokenGenerator, IUploadFile uploadFile)
+        {
+            TokenGenerator = tokenGenerator;
+            UploadFile = uploadFile;
+        }
         /// <summary>
-        /// İstek için api/ApplicationUser/Register
+        /// Kullanıcı Kayıt eder
         /// </summary>
         /// <param name="Register"></param>
+        /// Post: api/ApplicationUser/register
         [HttpPost]
         [Route("register")]
         public ActionResult Register(RegisterRequest model)
@@ -36,7 +46,7 @@ namespace Message.Api.Controllers
                 {
                     Id = Guid.NewGuid(),
                     ApplicationUserId = user.Id,
-                    TokenString = Token(user.UserName, user.Email)
+                    TokenString = TokenGenerator.Token(user.UserName, user.Email)
                 };
                 user.TokenId = token.Id;
 
@@ -47,23 +57,12 @@ namespace Message.Api.Controllers
             }
             return Ok(ReturnValidationError());
         }
-
-        public string Token(string userName, string email)
-        {
-            var token = new JwtSecurityToken(
-                issuer: "Message Test",
-                audience: userName,
-                expires: DateTime.Now,
-                signingCredentials: new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(email + "Test Verisidir")),
-                    SecurityAlgorithms.HmacSha256Signature)
-                );
-            
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+        
         /// <summary>
-        /// İstek için api/ApplicationUser/Login
+        /// Kullanıcı Girişi
         /// </summary>
         /// <param name="Login"></param>
+        /// Post: api/ApplicationUser/login
         [HttpPost]
         [Route("login")]
         public ActionResult<LoginResponse> Login(LoginRequest model)
@@ -74,7 +73,7 @@ namespace Message.Api.Controllers
             else
             {
                 var token = UnitOfWork.TokenRepository.GetById(user.TokenId);
-                token.TokenString = Token(user.UserName, user.Email);
+                token.TokenString = TokenGenerator.Token(user.UserName, user.Email);
                 UnitOfWork.Commit();
                 return Ok(new LoginResponse() { IsSuccess = true, Token = token.TokenString , Message = "Başarılı",
                 Email = user.Email, FirstName = user.FirstName , LastName = user.LastName, UserName = user.UserName});
@@ -82,9 +81,23 @@ namespace Message.Api.Controllers
         }
 
         /// <summary>
-        /// İstek için api/ApplicationUser/ApplicationUserUpdate
+        /// Resim ekler
+        /// </summary>
+        /// <param name="updateProfilePhotoRequest"></param>
+        /// Post: api/ApplicationUser/UploadFileImage
+        [HttpPost]
+        [Route("UploadFileImage")]
+        public ActionResult UploadFileImage([FromForm] UpdateProfilePhotoRequest updateProfilePhotoRequest)
+        {
+            UploadFile.UploadFileImage(updateProfilePhotoRequest.File,updateProfilePhotoRequest.Id);
+            return Ok();
+        }
+
+        /// <summary>
+        /// Kullanıcı Günceller
         /// </summary>
         /// <param name="ApplicationUserUpdate"></param>
+        /// Post: api/ApplicationUser/applicationUserUpdate
         [HttpPost]
         [Route("applicationUserUpdate")]
         public ActionResult ApplicationUserUpdate(ApplicaitionUserUpdateRequest model)
@@ -104,9 +117,10 @@ namespace Message.Api.Controllers
         }
 
         /// <summary>
-        /// İstek için api/ApplicationUser/delete
+        /// Kullanıcı Siler
         /// </summary>
         /// <param name="Delete"></param>
+        /// Post: api/ApplicationUser/delete
         [HttpDelete]
         [Route("delete")]
         public ActionResult Delete(Guid id)

@@ -1,4 +1,5 @@
 using FluentValidation.AspNetCore;
+using Message.Api.Core;
 using Message.Api.Validation;
 using Message.Data.DAL;
 using Message.Data.DAL.Repository;
@@ -32,6 +33,8 @@ namespace Message.Api
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
+            services.AddScoped<ITokenGenerator, TokenGenerator>();
+            services.AddScoped<IUploadFile, UploadFile>();
 
 
             services.AddControllers();

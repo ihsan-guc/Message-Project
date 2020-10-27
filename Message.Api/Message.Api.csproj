@@ -27,4 +27,8 @@
     <ProjectReference Include="..\Message.Data.DAL\Message.Data.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
 </Project>
