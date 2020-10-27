@@ -10,7 +10,7 @@ namespace Message.Data.DAL
         public DbSet<Token> Tokens { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("server=127.0.0.1;port=3306;user=root;password=123456;database=MessageDb")
+            optionsBuilder.UseMySql("server=127.0.0.1;port=3306;user=root;password=12345678;database=MessageDb")
                 .EnableSensitiveDataLogging().EnableDetailedErrors();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
