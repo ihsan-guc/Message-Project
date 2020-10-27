@@ -14,6 +14,8 @@ C:\Users\EysanGuc\source\repos\Api\Message.Data.DAL\bin\Debug\netcoreapp3.1\Mess
 C:\Users\EysanGuc\source\repos\Api\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.genruntimeconfig.cache
 C:\Users\EysanGuc\source\repos\Api\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.csproj.CoreCompileInputs.cache
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.deps.json
+C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.runtimeconfig.json
+C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.runtimeconfig.dev.json
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.dll
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.pdb
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.Domain.dll
@@ -21,10 +23,8 @@ C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\bin\Debug\net
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.csprojAssemblyReference.cache
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.AssemblyInfoInputs.cache
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.AssemblyInfo.cs
+C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.csproj.CoreCompileInputs.cache
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.csproj.CopyComplete
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.dll
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.pdb
-C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.runtimeconfig.json
-C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.runtimeconfig.dev.json
-C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.csproj.CoreCompileInputs.cache
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.genruntimeconfig.cache

@@ -203,5 +203,3 @@ C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcorea
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.csproj.CoreCompileInputs.cache
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.dll
-C:\Users\fixedbugs\Desktop\GitHub\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.pdb
