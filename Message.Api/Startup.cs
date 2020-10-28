@@ -37,6 +37,7 @@ namespace Message.Api
             services.AddScoped<IUploadFile, UploadFile>();
 
 
+
             services.AddControllers();
 
             services.AddControllers().AddFluentValidation(fv =>

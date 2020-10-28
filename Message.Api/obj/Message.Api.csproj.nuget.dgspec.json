@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Api\\Message.Api.csproj": {}
+    "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Api\\Message.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Api\\Message.Api.csproj": {
+    "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Api\\Message.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Api\\Message.Api.csproj",
+        "projectUniqueName": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Api\\Message.Api.csproj",
         "projectName": "Message.Api",
-        "projectPath": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Api\\Message.Api.csproj",
-        "packagesPath": "C:\\Users\\fixedbugs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Api\\obj\\",
+        "projectPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Api\\Message.Api.csproj",
+        "packagesPath": "C:\\Users\\EysanGuc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\fixedbugs\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\EysanGuc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -27,8 +31,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj": {
-                "projectPath": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj"
+              "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj": {
+                "projectPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj"
               }
             }
           }
@@ -80,6 +84,10 @@
               "target": "Package",
               "version": "[3.1.4, )"
             },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[13.8.2, )"
+            },
             "StructureMap.AspNetCore": {
               "target": "Package",
               "version": "[2.0.0, )"
@@ -107,22 +115,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj": {
+    "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj",
         "projectName": "Message.Data.DAL",
-        "projectPath": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj",
-        "packagesPath": "C:\\Users\\fixedbugs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.DAL\\obj\\",
+        "projectPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj",
+        "packagesPath": "C:\\Users\\EysanGuc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\fixedbugs\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\EysanGuc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -134,8 +146,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj": {
-                "projectPath": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj"
+              "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj": {
+                "projectPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj"
               }
             }
           }
@@ -180,22 +192,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj": {
+    "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj",
         "projectName": "Message.Data.Domain",
-        "projectPath": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj",
-        "packagesPath": "C:\\Users\\fixedbugs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fixedbugs\\Desktop\\GitHub\\Message-Project\\Message.Data.Domain\\obj\\",
+        "projectPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj",
+        "packagesPath": "C:\\Users\\EysanGuc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\fixedbugs\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\EysanGuc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -232,7 +248,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
