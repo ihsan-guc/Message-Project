@@ -520,3 +520,15 @@ C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\obj\D
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.dll
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.pdb
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.genruntimeconfig.cache
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\Namotion.Reflection.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\NJsonSchema.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\NSwag.Annotations.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\NSwag.AspNetCore.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\NSwag.Core.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\NSwag.Generation.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\NSwag.Generation.AspNetCore.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.csproj.CoreCompileInputs.cache
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.MvcApplicationPartsAssemblyInfo.cache
