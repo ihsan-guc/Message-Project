@@ -36,7 +36,18 @@ namespace Message.Api
             services.AddScoped<ITokenGenerator, TokenGenerator>();
             services.AddScoped<IUploadFile, UploadFile>();
 
-
+            services.AddSwaggerDocument(con => {
+                con.PostProcess = (doc =>
+                {
+                    doc.Info.Title = "MessageApi";
+                    doc.Info.Contact = new NSwag.OpenApiContact()
+                    {
+                        Email = "ihsanguc.33@gmail.com",
+                        Name = "Ýhsan Güç",
+                        Url = "https://www.linkedin.com/in/ihsan-g%C3%BC%C3%A7-873024156/"
+                    };
+                });
+            });
 
             services.AddControllers();
 
@@ -60,6 +71,9 @@ namespace Message.Api
             db.Database.EnsureCreated();
 
             app.UseAuthentication();
+
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseHttpsRedirection();
 
