@@ -136,5 +136,32 @@ namespace Message.Api.Controllers
             }
             return Ok(ReturnValidationError());
         }
+        /// <summary>
+        /// Kullanıcı Profil
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("getprofile")]
+        public ActionResult GetProfileUser(GetProfileRequest getProfileRequest)
+        {
+            if (ModelState.IsValid)
+            {
+                var profile = UnitOfWork.ApplicationUserRepository.GetById(getProfileRequest.UserId);
+                if (profile != null)
+                {
+                    var response = new GetProfileResponse()
+                    {
+                        Email = profile.Email,
+                        FirstName = profile.FirstName,
+                        LastName = profile.LastName,
+                        UserName = profile.UserName,
+                        Message = "Başarılı",
+                        IsSuccess = true,
+                    };
+                    return Ok(response);
+                }
+            }
+            return Ok(ReturnValidationError());
+        }
     }
 }
