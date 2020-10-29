@@ -53,11 +53,11 @@ namespace Message.Api.Controllers
                 UnitOfWork.ApplicationUserRepository.Add(user);
                 UnitOfWork.TokenRepository.Add(token);
                 UnitOfWork.Commit();
-                return Ok(new RegisterResponse() { IsSuccess = true, Message = "Başarılı", Token = token.TokenString});
+                return Ok(new RegisterResponse() { IsSuccess = true, Message = "Başarılı", Token = token.TokenString });
             }
             return Ok(ReturnValidationError());
         }
-        
+
         /// <summary>
         /// Kullanıcı Girişi
         /// </summary>
@@ -75,8 +75,16 @@ namespace Message.Api.Controllers
                 var token = UnitOfWork.TokenRepository.GetById(user.TokenId);
                 token.TokenString = TokenGenerator.Token(user.UserName, user.Email);
                 UnitOfWork.Commit();
-                return Ok(new LoginResponse() { IsSuccess = true, Token = token.TokenString , Message = "Başarılı",
-                Email = user.Email, FirstName = user.FirstName , LastName = user.LastName, UserName = user.UserName});
+                return Ok(new LoginResponse()
+                {
+                    IsSuccess = true,
+                    Token = token.TokenString,
+                    Message = "Başarılı",
+                    Email = user.Email,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    UserName = user.UserName
+                });
             }
         }
 
@@ -89,8 +97,21 @@ namespace Message.Api.Controllers
         [Route("UploadFileImage")]
         public ActionResult UploadFileImage([FromForm] UpdateProfilePhotoRequest updateProfilePhotoRequest)
         {
-            UploadFile.UploadFileImage(updateProfilePhotoRequest.File,updateProfilePhotoRequest.Id);
-            return Ok();
+            if (ModelState.IsValid)
+            {
+                var profile = UnitOfWork.ApplicationUserRepository.GetById(updateProfilePhotoRequest.Id);
+                if (profile != null)
+                {
+                    var imageName = UploadFile.UploadFileImage(updateProfilePhotoRequest.File, updateProfilePhotoRequest.Id);
+                    if (imageName != null)
+                    {
+                        profile.Image = imageName;
+                        UnitOfWork.Commit();
+                    }
+                    return Ok(new BaseResponse() { IsSuccess = true, Message = "Başarılı" });
+                }
+            }
+            return Ok(ReturnValidationError());
         }
 
         /// <summary>
@@ -132,14 +153,14 @@ namespace Message.Api.Controllers
                 UnitOfWork.ApplicationUserRepository.Delete(user);
                 UnitOfWork.TokenRepository.Delete(token);
                 UnitOfWork.Commit();
-                return Ok(new BaseResponse() { IsSuccess = true ,Message = "Başarılı"});
+                return Ok(new BaseResponse() { IsSuccess = true, Message = "Başarılı" });
             }
             return Ok(ReturnValidationError());
         }
         /// <summary>
         /// Kullanıcı Profil
         /// </summary>
-        /// <returns></returns>
+        /// Post: api/ApplicationUser/delete
         [HttpPost]
         [Route("getprofile")]
         public ActionResult GetProfileUser(GetProfileRequest getProfileRequest)

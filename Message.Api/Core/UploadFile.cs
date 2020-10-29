@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Message.Api.Core
@@ -28,9 +29,18 @@ namespace Message.Api.Core
                 string uploadDir = Path.Combine("Images");
                 filename = ApplicationUserId.ToString() + file.FileName;
                 string filepath = Path.Combine(uploadDir,filename);
+                var fileContents = Directory.GetFiles(uploadDir);
+                foreach (var item in fileContents)
+                {
+                    if (item.Contains(ApplicationUserId.ToString()))
+                    {
+                        File.Delete(item);
+                    }
+                }
                 using (var fileStream = new FileStream(filepath,FileMode.Create))
                 {
                     file.CopyTo(fileStream);
+                    filename = fileStream.Name;
                 }
             }
             return filename;
