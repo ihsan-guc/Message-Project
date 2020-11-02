@@ -53,7 +53,7 @@ namespace Message.Api.Controllers
                 UnitOfWork.ApplicationUserRepository.Add(user);
                 UnitOfWork.TokenRepository.Add(token);
                 UnitOfWork.Commit();
-                return Ok(new RegisterResponse() { IsSuccess = true, Message = "Başarılı", Token = token.TokenString });
+                return Ok(new RegisterResponse() { IsSuccess = true, Message = "Başarılı", Token = token.TokenString, Id= user.Id });
             }
             return Ok(ReturnValidationError());
         }
@@ -83,7 +83,8 @@ namespace Message.Api.Controllers
                     Email = user.Email,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
-                    UserName = user.UserName
+                    UserName = user.UserName,
+                    Id = user.Id
                 });
             }
         }
