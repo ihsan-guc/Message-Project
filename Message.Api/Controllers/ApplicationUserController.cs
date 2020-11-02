@@ -132,7 +132,7 @@ namespace Message.Api.Controllers
                 user.Password = model.Password;
                 user.Email = model.Email;
                 UnitOfWork.Commit();
-                return Ok(new BaseResponse() { IsSuccess = true });
+                return Ok(new BaseResponse() { IsSuccess = true , Message = "Başarılı"});
             }
             return Ok(ReturnValidationError());
         }
