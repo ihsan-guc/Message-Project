@@ -84,7 +84,8 @@ namespace Message.Api.Controllers
                     FirstName = user.FirstName,
                     LastName = user.LastName,
                     UserName = user.UserName,
-                    Id = user.Id
+                    Id = user.Id,
+                    Image = user.Image
                 });
             }
         }
