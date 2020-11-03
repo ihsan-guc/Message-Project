@@ -11,14 +11,15 @@ namespace Message.Api.Validation
         {
             RuleFor(p => p.UserName).NotEmpty().WithMessage("UserName Boş Olamaz");
             RuleFor(p => p.Password).NotEmpty().WithMessage("Password Boş Olamaz");
-            RuleFor(p => p.Email).EmailAddress().NotEmpty().WithMessage("Email Boş Olamaz");
+            
+            //RuleFor(p => p.Email).EmailAddress().NotEmpty().WithMessage("Email Boş Olamaz");
+            
             RuleFor(p => p).Custom((model, context) =>
             {
-                var email = messageContext.ApplicationUsers.FirstOrDefault(p => p.Email == model.Email);
+                //var email = messageContext.ApplicationUsers.FirstOrDefault(p => p.Email == model.Email);
                 var user = messageContext.ApplicationUsers.FirstOrDefault(p => p.Id == model.Id);
-
-                if (email != null)
-                    context.AddFailure("Bu e-posta daha önce alınmış!");
+                //if (email != null)
+                //    context.AddFailure("Bu e-posta daha önce alınmış!");
                 if (user == null)
                     context.AddFailure(" Kullanıcı yok");
             });
