@@ -138,6 +138,22 @@ namespace Message.Api.Controllers
             }
             return Ok(ReturnValidationError());
         }
+        /// <summary>
+        /// Kullanıcı Arama
+        /// </summary>
+        /// <param name="ApplicationSearch"></param>
+        /// Post: api/ApplicationUser/ApplicationSearch
+        [HttpPost]
+        [Route("ApplicationSearch")]
+        public ActionResult ApplicationSearch(SearchRequest model)
+        {
+            var userList = UnitOfWork.ApplicationUserRepository.SearchApplicationUserList(model.SearchText);                
+            if (userList.Count() > 0)
+            {
+                return Ok(new SearchResponse() { IsSuccess = true, Message = "Başarılı", ApplicationUsersList = userList.ToList()});
+            }
+            return Ok(new SearchResponse() { IsSuccess = false, Message = "Aradaığınız kullanıcı yok", ApplicationUsersList = null});
+        }
 
         /// <summary>
         /// Kullanıcı Siler
