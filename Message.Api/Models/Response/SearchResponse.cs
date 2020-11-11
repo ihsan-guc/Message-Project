@@ -1,5 +1,4 @@
 ﻿using Message.Data.Domain.Entities;
-using System;
 using System.Collections.Generic;
 
 namespace Message.Api.Models.Response

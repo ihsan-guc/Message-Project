@@ -34,6 +34,7 @@ namespace Message.Api
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
             services.AddScoped<ITokenGenerator, TokenGenerator>();
+            services.AddScoped<IUserMessageRepository, UserMessageRepository>();
             services.AddScoped<IUploadFile, UploadFile>();
 
             services.AddSwaggerDocument(con => {
@@ -56,6 +57,7 @@ namespace Message.Api
                 fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
                 fv.RegisterValidatorsFromAssemblyContaining<RegisterValidation>();
                 fv.RegisterValidatorsFromAssemblyContaining<ApplicationUserUpdateValidation>();
+                fv.RegisterValidatorsFromAssemblyContaining<UserMessageValidation>();
             });
 
         }
