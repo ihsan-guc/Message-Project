@@ -32,6 +32,7 @@ namespace Message.Api
             services.AddScoped<MessageContext, MessageContext>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+            services.AddScoped<IApplicationAdminRepository, ApplicationAdminRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
             services.AddScoped<ITokenGenerator, TokenGenerator>();
             services.AddScoped<IUserMessageRepository, UserMessageRepository>();

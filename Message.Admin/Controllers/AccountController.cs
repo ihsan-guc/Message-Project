@@ -14,7 +14,6 @@ namespace Message.Admin.Controllers
 {
     public class AccountController : BaseController
     {
-
         [HttpGet]
         public IActionResult SignIn()
         {
@@ -39,7 +38,7 @@ namespace Message.Admin.Controllers
                 var licensIdentity = new ClaimsIdentity(licensClaims, "İhsan");
                 var claimsPrincipal = new ClaimsPrincipal(new[] { userIdentity, licensIdentity });
                 HttpContext.SignInAsync(claimsPrincipal);
-                return RedirectToAction("Index", "Customer");
+                return RedirectToAction("Index", "Home");
             }
             return View();
         }
