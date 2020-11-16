@@ -1,0 +1,45 @@
+﻿@model Message.Data.Domain.Entities.ApplicationUser
+@using (Html.BeginForm("DeleteConfirmed", "ApplicationUser", FormMethod.Post))
+{
+
+    @Html.HiddenFor(p => p.Id)
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="@Model.Image" />
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    Kullanıcı Adı:
+                                    <span class="float-right">@Html.DisplayFor(m => m.UserName)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Ad:
+                                    <span class="float-right">@Html.DisplayFor(m => m.FirstName)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    Soyadı:
+                                    <span class="float-right">@Html.DisplayFor(m => m.LastName)</span>
+                                </li>
+                                <li class="list-group-item">
+                                    E-posta:
+                                    <span class="float-right">@Html.DisplayFor(m => m.Email)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="float-right mt-2">
+        <button class="btn btn-outline-primary" type="submit"> Silin </button>
+    </div>
+    <div class="float-right mt-2">
+        <a class="btn btn-outline-success" href="@Url.Action("Index", "ApplicationUser")"> Geri </a>
+    </div>
+}

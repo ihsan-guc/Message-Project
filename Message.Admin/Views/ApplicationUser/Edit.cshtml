@@ -1,0 +1,16 @@
+﻿@model Message.Admin.Models.ApplicaitonUserViewModel.ApplicationUserCEViewModel
+@{
+    ViewBag.Title = "Kullanıcı Güncelle";
+}
+
+@using (Html.BeginForm("EditConfirmed", "ApplicationUser", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(p => p.Id)
+        @await Html.PartialAsync("_CreateEdit")
+    </div>
+}
+

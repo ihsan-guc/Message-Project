@@ -47,7 +47,6 @@ C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -176,9 +175,6 @@ C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.csprojAssemblyReference.cache
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.AssemblyInfoInputs.cache
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.AssemblyInfo.cs
-C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.csproj.CoreCompileInputs.cache
-C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.RazorAssemblyInfo.cache
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.RazorAssemblyInfo.cs
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.TagHelpers.input.cache
@@ -200,3 +196,17 @@ C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.dll
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.pdb
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.genruntimeconfig.cache
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.csproj.CoreCompileInputs.cache
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Message.Admin.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationUser\Create.cshtml.g.cs
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationUser\Details.cshtml.g.cs
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationUser\Edit.cshtml.g.cs
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationUser\Index.cshtml.g.cs
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationUser\List.cshtml.g.cs
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationUser\_CreateEdit.cshtml.g.cs
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\X.PagedList.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationUser\ApplicationDelete.cshtml.g.cs
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Admin\bin\Debug\netcoreapp3.1\Message.Admin.StaticWebAssets.xml

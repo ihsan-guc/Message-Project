@@ -28,7 +28,7 @@ namespace Message.Api.Core
             {
                 string uploadDir = Path.Combine("Images");
                 filename = ApplicationUserId.ToString() + file.FileName;
-                string filepath = Path.Combine(uploadDir,filename);
+                string filepath = Path.Combine(uploadDir, filename);
                 var fileContents = Directory.GetFiles(uploadDir);
                 foreach (var item in fileContents)
                 {
@@ -37,13 +37,20 @@ namespace Message.Api.Core
                         File.Delete(item);
                     }
                 }
-                using (var fileStream = new FileStream(filepath,FileMode.Create))
+                using (var fileStream = new FileStream(filepath, FileMode.Create))
                 {
                     file.CopyTo(fileStream);
                     filename = fileStream.Name;
                 }
             }
             return filename;
+        }
+        public string GetPathAndFileName(string filename)
+        {
+            string path = WebHostEnvironment.WebRootPath + "\\Image\\";
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+            return path + filename;
         }
     }
 }

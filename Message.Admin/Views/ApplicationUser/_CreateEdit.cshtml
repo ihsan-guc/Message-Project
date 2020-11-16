@@ -1,0 +1,58 @@
+﻿@model Message.Admin.Models.ApplicaitonUserViewModel.ApplicationUserCEViewModel
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tab-price">
+                        <div class="form-row">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="col-md-6">
+                                @Html.Label("Kullanıcı Adı")
+                                @Html.TextBoxFor(m => m.UserName, new { placeholder = "Kullanıcı Adı", @class = "form-control mb-2 mr-sm-2" })
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                @Html.Label("Ad")
+                                @Html.TextBoxFor(m => m.FirstName, new { placeholder = "Ad", @class = "form-control mb-2 mr-sm-2" })
+                                @*<input asp-for="FirstName" class="form-control" />*@
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                @Html.Label("Soyadı")
+                                @Html.TextBoxFor(m => m.LastName, new { placeholder = "Soyadı", @class = "form-control mb-2 mr-sm-2" })
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label class="text-auto-size">Profil Fotoğrafı</label>
+                                </div>
+                                <div>
+                                    <input type="file" name="Image" id="Image" class="custom-file-input" />
+                                    <label class="custom-file-label" for="File" data-browse="Gözat">Yükle</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                @Html.Label("E-Posta")
+                                @Html.TextBoxFor(m => m.Email, new { placeholder = "E-posta", @class = "form-control mb-2 mr-sm-2" })
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                @Html.Label("Şifre")
+                                @Html.TextBoxFor(m => m.Password, new { placeholder = "Şifre", type = "password", @class = "form-control mb-2 mr-sm-2" })
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="float-right mt-2">
+            <button class="btn btn-primary">Kaydet</button>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

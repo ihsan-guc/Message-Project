@@ -1,0 +1,36 @@
+﻿@model Message.Data.Domain.Entities.ApplicationUser
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div style="width:100%; text-align:center">
+                            <img src="@Model.Image" class="img-thumbnail" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                Kullanıcı Adı:
+                                <span class="float-right">@Html.DisplayFor(m => m.UserName)</span>
+                            </li>
+                            <li class="list-group-item">
+                                Ad:
+                                <span class="float-right">@Html.DisplayFor(m => m.FirstName)</span>
+                            </li>
+                            <li class="list-group-item">
+                                Soyadı:
+                                <span class="float-right">@Html.DisplayFor(m => m.LastName)</span>
+                            </li>
+                            <li class="list-group-item">
+                                E-posta:
+                                <span class="float-right">@Html.DisplayFor(m => m.Email)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
