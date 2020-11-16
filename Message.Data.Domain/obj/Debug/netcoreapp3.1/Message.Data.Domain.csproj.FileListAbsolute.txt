@@ -25,3 +25,12 @@ C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Data.Doma
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Data.Domain\obj\Debug\netcoreapp3.1\Message.Data.Domain.csproj.CoreCompileInputs.cache
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Data.Domain\obj\Debug\netcoreapp3.1\Message.Data.Domain.dll
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Data.Domain\obj\Debug\netcoreapp3.1\Message.Data.Domain.pdb
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.Domain\bin\Debug\netcoreapp3.1\Message.Data.Domain.deps.json
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.Domain\bin\Debug\netcoreapp3.1\Message.Data.Domain.dll
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.Domain\bin\Debug\netcoreapp3.1\Message.Data.Domain.pdb
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.Domain\obj\Debug\netcoreapp3.1\Message.Data.Domain.csprojAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.Domain\obj\Debug\netcoreapp3.1\Message.Data.Domain.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.Domain\obj\Debug\netcoreapp3.1\Message.Data.Domain.AssemblyInfo.cs
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.Domain\obj\Debug\netcoreapp3.1\Message.Data.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.Domain\obj\Debug\netcoreapp3.1\Message.Data.Domain.dll
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.Domain\obj\Debug\netcoreapp3.1\Message.Data.Domain.pdb

@@ -34,3 +34,15 @@ C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Data.DAL\
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.csproj.CopyComplete
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.dll
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.pdb
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.deps.json
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.dll
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.DAL.pdb
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.Domain.dll
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\bin\Debug\netcoreapp3.1\Message.Data.Domain.pdb
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.csprojAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.AssemblyInfo.cs
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.csproj.CopyComplete
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.dll
+C:\Users\HP\Documents\GitHub\Message-Project\Message.Data.DAL\obj\Debug\netcoreapp3.1\Message.Data.DAL.pdb
