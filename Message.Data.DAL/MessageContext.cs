@@ -12,6 +12,7 @@ namespace Message.Data.DAL
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ApplicationAdmin> ApplicationAdmins{ get; set; }
         public DbSet<UserMessage> UserMessages{ get; set; }
         public DbSet<Token> Tokens{ get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

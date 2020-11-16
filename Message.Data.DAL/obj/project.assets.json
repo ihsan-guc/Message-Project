@@ -7394,20 +7394,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\EysanGuc\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Documents\\GitHub\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj",
       "projectName": "Message.Data.DAL",
-      "projectPath": "C:\\Users\\HP\\Documents\\GitHub\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Documents\\GitHub\\Message-Project\\Message.Data.DAL\\obj\\",
+      "projectPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj",
+      "packagesPath": "C:\\Users\\EysanGuc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\EysanGuc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -7419,8 +7424,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\HP\\Documents\\GitHub\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj": {
-              "projectPath": "C:\\Users\\HP\\Documents\\GitHub\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj"
+            "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj": {
+              "projectPath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj"
             }
           }
         }
@@ -7465,7 +7470,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
