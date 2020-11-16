@@ -1,8 +1,56 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    Layout = null;
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sign In</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <div class="col-md-6 col-md-offset-3">
+                @Html.ValidationSummary(false)
+                @using (Html.BeginForm("SignIn", "Account", FormMethod.Post))
+                {
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="margin-bottom-1x">Admin girişi</h4>
+                            <div class="form-group input-group">
+                                <input name="Email" class="form-control" type="email" placeholder="Eposta" required><span class="input-group-addon"><i class="icon-mail"></i></span>
+                            </div>
+                            <div class="form-group input-group">
+                                <input name="Password" class="form-control" type="password" placeholder="Şifre" required><span class="input-group-addon"><i class="icon-lock"></i></span>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-between padding-bottom-1x">
+                                <div class="text-center text-sm-right">
+                                    <button class="btn btn-primary margin-bottom-none" type="submit">Giriş</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="pl-2">
+            <span class="text-muted">Tüm hakları saklıdır @@@DateTime.Now.Year</span>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
