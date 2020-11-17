@@ -20,15 +20,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-0">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-dark" type="button" asp-area="" asp-controller="Account" asp-action="SignOut">Sign out</a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark font-weight-bold" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark font-weight-bold" asp-area="" asp-controller="ApplicationUser" asp-action="Index">Kullanıcılar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark font-weight-bold" asp-area="" asp-controller="Account" asp-action="SignOut">Sign out</a>
                         </li>
                     </ul>
                 </div>
@@ -43,7 +45,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - Message.Admin - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - Message.Admin - <a asp-area="" asp-controller="Home" asp-action="Privacy">Kullanım Hakları Saklıdır.</a>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
