@@ -10,7 +10,6 @@ namespace Message.Api.Validation
         {
             RuleFor(p => p.SenderApplicationUserId).NotEmpty().WithMessage("Gönderici Id Boş Olamaz");
             RuleFor(p => p.ReceiverApplicationUserId).NotEmpty().WithMessage("Alici Id Boş Olamaz");
-            RuleFor(p => p.SendDate).NotEmpty().WithMessage("Tarih Boş Olamaz");
             RuleFor(p => p.MessageText).NotEmpty().WithMessage("Mesaj Boş Olamaz");
         }
     }
