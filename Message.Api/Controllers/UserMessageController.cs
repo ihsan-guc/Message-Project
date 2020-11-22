@@ -59,26 +59,9 @@ namespace Message.Api.Controllers
                 };
                 UnitOfWork.UserMessageRepository.Add(message);
                 UnitOfWork.Commit();
-                var messageresponse = new MessageResponse
-                {
-                    IsSuccess = true,
-                    Message = "Mesaj Gönderildi",
-                    Datetime = message.SendDate,
-                    //MessageText = message.MessageText,
-                    ReceiverApplicationUserId = message.ReceiverApplicationUserId,
-                    SenderApplicationUserId = message.SenderApplicationUserId,
-                };
-                var Receivermessagelist = UnitOfWork.UserMessageRepository.GetQueryable().Where(p => p.ReceiverApplicationUserId == message.ReceiverApplicationUserId);
-                foreach (var item in Receivermessagelist)
-                {
-                    messageresponse.MessageText.Add(item.MessageText);
-                }
-                return Ok(messageresponse);
+                return Ok(new BaseResponse { IsSuccess = true, Message = "Mesaj Gönderildi" });
             }
             return Ok(ReturnValidationError());
         }
-
-
-
     }
 }
