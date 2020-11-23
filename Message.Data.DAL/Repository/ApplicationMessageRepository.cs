@@ -38,11 +38,7 @@ namespace Message.Data.DAL.Repository
                     ReceiverUserName = receiverUser.UserName,
                     ReceiverFirstName = receiverUser.FirstName,
                     ReceiverLastName = receiverUser.LastName,
-<<<<<<< HEAD
                     ReceiverImage = receiverUser.Image,
-=======
-                    ReceiverUserName = receiverUser.UserName
->>>>>>> 37ae5f7d880c8904f37c25a48442b2795ce98e90
                 };
                 userMessageDTO.Add(usermessage);
             }
