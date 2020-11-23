@@ -9,6 +9,7 @@ namespace Message.Data.DAL.Repository
     public interface IUserMessageRepository : IRepository<UserMessage>
     {
         List<UserMessageDTO> ListMessage(Guid SenderId, Guid ReceiverId);
+        List<ApplicationUser> ApplicationMessageList(Guid ApplicationUserId);
     }
     public class UserMessageRepository : EfRepository<UserMessage>, IUserMessageRepository
     {
@@ -16,6 +17,18 @@ namespace Message.Data.DAL.Repository
         {
 
         }
+
+        public List<ApplicationUser> ApplicationMessageList(Guid ApplicationUserId)
+        {
+            var ReceiverApplicationUserIdList = _context.UserMessages.Where(p => p.SenderApplicationUserId == ApplicationUserId).Select(p=>p.ReceiverApplicationUserId).Distinct().ToList();
+            var applicationUserList = new List<ApplicationUser>();
+            foreach (var applicationUserId in ReceiverApplicationUserIdList)
+            {
+                applicationUserList.Add(_context.ApplicationUsers.Where(p => p.Id == applicationUserId).FirstOrDefault());
+            }
+            return applicationUserList;
+        }
+
         public List<UserMessageDTO> ListMessage(Guid SenderId, Guid ReceiverId)
         {
             var userMessageDTO = new List<UserMessageDTO>();
@@ -42,12 +55,6 @@ namespace Message.Data.DAL.Repository
                 };
                 userMessageDTO.Add(usermessage);
             }
-            //return _context.UserMessages.Where(p => (p.SenderApplicationUserId == SenderId && p.ReceiverApplicationUserId == ReceiverId) || (p.SenderApplicationUserId == ReceiverId  && p.ReceiverApplicationUserId == SenderId)).OrderBy(s => s.SendDate).Select(p => new UserMessageDTO
-            //{
-            //    Id = p.Id,
-            //    MessageText = p.MessageText,
-            //    SendDate = p.SendDate,
-            //});
             return userMessageDTO;
         }
     }

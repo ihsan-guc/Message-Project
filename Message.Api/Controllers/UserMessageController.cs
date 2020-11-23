@@ -63,5 +63,27 @@ namespace Message.Api.Controllers
             }
             return Ok(ReturnValidationError());
         }
+
+        /// <summary>
+        /// Kullanıcı Mesajlaştığı kişileri getirir.
+        /// </summary>
+        /// <param name="GetApplicationMessageList"></param>
+        /// Post: api/UserMessage/GetApplicationMessageList
+        [HttpPost]
+        [Route("GetApplicationMessageList")]
+        public ActionResult GetApplicationMessageList(GetApplicationMessageListRequest model)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = new GetApplicationMessageListResponse
+                {
+                    IsSuccess = true,
+                    Message = "Başarılı",
+                    ApplicationMessageList = UnitOfWork.UserMessageRepository.ApplicationMessageList(model.ApplicationUserId).ToList()
+                };
+                return Ok(response);
+            }
+            return Ok(ReturnValidationError());
+        }
     }
 }
