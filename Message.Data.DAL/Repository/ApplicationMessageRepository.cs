@@ -29,14 +29,15 @@ namespace Message.Data.DAL.Repository
                     Id = message.Id,
                     MessageText = message.MessageText,
                     SendDate = message.SendDate,
+                    SenderId = senderUser.Id,
                     SenderFirstName = senderUser.FirstName,
                     SenderLastName = senderUser.LastName,
-                    SenderImage = senderUser.LastName,
+                    SenderImage = senderUser.Image,
                     SenderUserName = senderUser.UserName,
+                    ReceiverUserName = receiverUser.UserName,
                     ReceiverFirstName = receiverUser.FirstName,
-                    ReceiverImage = receiverUser.Image,
                     ReceiverLastName = receiverUser.LastName,
-                    ReceiverUserName = receiverUser.LastName
+                    ReceiverImage = receiverUser.Image,
                 };
                 userMessageDTO.Add(usermessage);
             }

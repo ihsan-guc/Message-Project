@@ -6,6 +6,7 @@ namespace Message.Data.Domain.Entities
     {
         public DateTime SendDate { get; set; }
         public string MessageText { get; set; }
+        public Guid SenderId { get; set; }
         public string SenderUserName { get; set; }
         public string SenderFirstName { get; set; }
         public string SenderLastName { get; set; }
