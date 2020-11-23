@@ -32,7 +32,7 @@ namespace Message.Data.DAL.Repository
         public List<UserMessageDTO> ListMessage(Guid SenderId, Guid ReceiverId)
         {
             var userMessageDTO = new List<UserMessageDTO>();
-            var userMessagelist = _context.UserMessages.Where(p => (p.SenderApplicationUserId == SenderId && p.ReceiverApplicationUserId == ReceiverId) || (p.SenderApplicationUserId == ReceiverId && p.ReceiverApplicationUserId == SenderId)).OrderBy(s => s.SendDate);
+            var userMessagelist = _context.UserMessages.Where(p => (p.SenderApplicationUserId == SenderId && p.ReceiverApplicationUserId == ReceiverId) || (p.SenderApplicationUserId == ReceiverId && p.ReceiverApplicationUserId == SenderId)).OrderByDescending(s => s.SendDate);
             var senderUser = _context.ApplicationUsers.Where(p => p.Id == SenderId).FirstOrDefault();
             var receiverUser = _context.ApplicationUsers.Where(c => c.Id == ReceiverId).FirstOrDefault();
             string k = receiverUser.UserName;
@@ -42,12 +42,14 @@ namespace Message.Data.DAL.Repository
                 {
                     Id = message.Id,
                     MessageText = message.MessageText,
+                    MessageSender = message.SenderApplicationUserId,
                     SendDate = message.SendDate,
                     SenderId = senderUser.Id,
                     SenderFirstName = senderUser.FirstName,
                     SenderLastName = senderUser.LastName,
                     SenderImage = senderUser.Image,
                     SenderUserName = senderUser.UserName,
+                    ReceiverId = receiverUser.Id,
                     ReceiverUserName = receiverUser.UserName,
                     ReceiverFirstName = receiverUser.FirstName,
                     ReceiverLastName = receiverUser.LastName,
