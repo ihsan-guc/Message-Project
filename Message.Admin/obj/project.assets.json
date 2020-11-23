@@ -3768,10 +3768,7 @@
         },
         "runtime": {
           "bin/placeholder/Message.Data.DAL.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Message.Data.Domain/1.0.0": {
         "type": "project",
