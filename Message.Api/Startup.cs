@@ -4,6 +4,7 @@ using Message.Api.Validation;
 using Message.Data.DAL;
 using Message.Data.DAL.Repository;
 using Message.Data.DAL.Repository.Core;
+using Message.Data.Domain.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,6 +13,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Logging;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
 
 namespace Message.Api
 {
@@ -25,7 +31,7 @@ namespace Message.Api
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            
+
             var messageDB = Configuration.GetConnectionString("MessageDB");
             services.AddDbContext<MessageContext>(opt => opt.UseSqlServer(messageDB));
             services.AddDbContext<InMemoryContext>(opt => opt.UseInMemoryDatabase("MessageInMemory"));
@@ -38,7 +44,8 @@ namespace Message.Api
             services.AddScoped<IUserMessageRepository, UserMessageRepository>();
             services.AddScoped<IUploadFile, UploadFile>();
 
-            services.AddSwaggerDocument(con => {
+            services.AddSwaggerDocument(con =>
+            {
                 con.PostProcess = (doc =>
                 {
                     doc.Info.Title = "MessageApi";
