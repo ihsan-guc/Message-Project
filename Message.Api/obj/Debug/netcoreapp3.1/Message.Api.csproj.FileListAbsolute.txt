@@ -350,7 +350,6 @@ C:\Users\fixedbugs\Desktop\GitHub\ss\Message-Project\Message.Api\obj\Debug\netco
 C:\Users\fixedbugs\Desktop\GitHub\ss\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.genruntimeconfig.cache
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\Message.Api.exe
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\Message.Api.deps.json
 C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\Message.Api.runtimeconfig.json
@@ -900,3 +899,7 @@ C:\Users\fixedbugs\Desktop\Github\Message-Project\Message.Api\obj\Debug\netcorea
 C:\Users\fixedbugs\Desktop\Github\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.dll
 C:\Users\fixedbugs\Desktop\Github\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.pdb
 C:\Users\fixedbugs\Desktop\Github\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\Message.Api.genruntimeconfig.cache
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\EysanGuc\source\repos\Message-Project\Message-Project\Message.Api\obj\Debug\netcoreapp3.1\scopedcss\bundle\Message.Api.styles.css

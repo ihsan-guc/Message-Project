@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IiEEu2Nd8Bbr5p2BKeRliH09qnp5Eqc7bBrlXgzwioQZlnFzcLg12n3KQXHRegiEmFLhC1sPBb+3dJC8KwBO1Q==",
+  "dgSpecHash": "2vvh3/QTN1c9DpLsLEcLM0EDGVudBjvcsMhIyFLWbBVgFOtkLApz7rPHnj2GwRJkEy1po0KwDQduuElgms0sjw==",
   "success": true,
   "projectFilePath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.DAL\\Message.Data.DAL.csproj",
   "expectedPackageFiles": [
@@ -139,7 +139,8 @@
     "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\EysanGuc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

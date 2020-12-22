@@ -37,12 +37,14 @@ namespace Message.Api
             services.AddDbContext<InMemoryContext>(opt => opt.UseInMemoryDatabase("MessageInMemory"));
             services.AddScoped<MessageContext, MessageContext>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IApplicationUserEmailRepository, ApplicationUserEmailRepository>();
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
             services.AddScoped<IApplicationAdminRepository, ApplicationAdminRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
             services.AddScoped<ITokenGenerator, TokenGenerator>();
             services.AddScoped<IUserMessageRepository, UserMessageRepository>();
             services.AddScoped<IUploadFile, UploadFile>();
+            services.AddScoped<IChangePasswordCode, ChangePasswordCode>();
 
             services.AddSwaggerDocument(con =>
             {
