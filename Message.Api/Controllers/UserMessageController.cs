@@ -39,6 +39,28 @@ namespace Message.Api.Controllers
         }
 
         /// <summary>
+        /// Geçiş Mesaj Silme
+        /// </summary>
+        /// <param name="allMessageDelete"></param>
+        /// Post: api/UserMessage/allMessageDelete
+        [HttpPost]
+        [Route("allMessageDelete")]
+        public ActionResult AllMessageDelete(GetUserMessageRequest model)
+        {
+            if (ModelState.IsValid)
+            {
+                var MessageList = UnitOfWork.UserMessageRepository.ListMessage(model.SenderApplicationUserId, model.ReceiverApplicationUserId).ToList();
+                foreach (var item in MessageList)
+                {
+                    UnitOfWork.UserMessageRepository.Delete(UnitOfWork.UserMessageRepository.GetById(item.Id));
+                }
+                UnitOfWork.Commit();
+                return Ok(new BaseResponse { IsSuccess = true, Message = "Mesajlar Silindi." });
+            }
+            return Ok(ReturnValidationError());
+        }
+
+        /// <summary>
         /// Mesaj Gönderme
         /// </summary>
         /// <param name="ChatMessage"></param>

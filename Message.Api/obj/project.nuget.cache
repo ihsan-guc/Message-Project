@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YmfFxZWVyDtIChvnChwWTGw3xMR4GIZ4KZZGtBGOq3hBwSL5s5RHdDnnYKZzOHGaK6wKWv/0BL50AXHihSElbg==",
+  "dgSpecHash": "rGr1dfWB2YUi6ZXtpwqSmvB6CAWNsXCGu4XQxlHil0tJn02ak/W9qOmq0UA3U5tx1zBgWVJLXNKZygX8HzJYHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Api\\Message.Api.csproj",
   "expectedPackageFiles": [
@@ -234,9 +234,7 @@
     "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
-    "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512",
-    "C:\\Users\\EysanGuc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\EysanGuc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+    "C:\\Users\\EysanGuc\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512"
   ],
   "logs": []
 }

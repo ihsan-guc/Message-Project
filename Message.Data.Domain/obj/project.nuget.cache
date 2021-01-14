@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e+T9cOF22nC43uADhenqtYNaCbisK6kpBFlU7b6YCi7W7Rx+nn6zwUth69IJJdZM1ajVE3/V2VrBEL2xsV/cKg==",
+  "dgSpecHash": "S8QkZRKal3vOSByWCKDDCBMhQi+UsKhB1PEsm/IlWetzK3oxTTKIeu2ze4MRd5O7JjUdHe/OWRVpv2mTHUoqzw==",
   "success": true,
   "projectFilePath": "C:\\Users\\EysanGuc\\source\\repos\\Message-Project\\Message-Project\\Message.Data.Domain\\Message.Data.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\EysanGuc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
