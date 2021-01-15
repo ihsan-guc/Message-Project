@@ -95,23 +95,23 @@ namespace Message.Api.Controllers
         }
 
         /// <summary>
-        /// Resim ekler
+        /// Resim ekler Image File için http://localhost:50000/Images/ Image String kısmı gelecek
         /// </summary>
         /// <param name="updateProfilePhotoRequest"></param>
         /// Post: api/ApplicationUser/UploadFileImage
         [HttpPost]
         [Route("UploadFileImage")]
-        public ActionResult UploadFileImage([FromForm] UpdateProfilePhotoRequest updateProfilePhotoRequest)
+        public async Task<ActionResult> UploadFileImage([FromForm] UpdateProfilePhotoRequest updateProfilePhotoRequest)
         {
             if (ModelState.IsValid)
             {
                 var profile = UnitOfWork.ApplicationUserRepository.GetById(updateProfilePhotoRequest.Id);
                 if (profile != null)
                 {
-                    var imageName = UploadFile.UploadFileImage(updateProfilePhotoRequest.File, updateProfilePhotoRequest.Id);
+                    var imageName = UploadFile.FileImageSaveAsync(updateProfilePhotoRequest.File);
                     if (imageName != null)
                     {
-                        profile.Image = imageName;
+                        profile.Image = await imageName;
                         UnitOfWork.Commit();
                     }
                     return Ok(new BaseResponse() { IsSuccess = true, Message = "Başarılı" });

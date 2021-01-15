@@ -6,12 +6,16 @@ using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Message.Api.Core
 {
     public interface IUploadFile
     {
         string UploadFileImage(IFormFile file, Guid ApplicationUserId);
+        Task<string> FileImageSaveAsync(IFormFile resim);
+        Task<string> FileImageCopyAsync(string resim);
+        bool ImageDelete(string resim);
     }
     public class UploadFile : IUploadFile
     {
@@ -51,6 +55,58 @@ namespace Message.Api.Core
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path);
             return path + filename;
+        }
+
+        public async Task<string> FileImageSaveAsync(IFormFile image)
+        {
+            if (image != null && image.Length > 0)
+            {
+                string imageName = image.FileName.UniqueCodeCreate();
+                string filePath = Path.Combine(@"wwwroot\Images\", imageName);
+                var file = File.Create(filePath);
+                await image.CopyToAsync(file);
+                file.Close();
+                return imageName;
+            }
+            return null;
+        }
+
+        public async Task<string> FileImageCopyAsync(string image)
+        {
+            string imageName = image.UniqueCodeCreate();
+            File.Copy(@"wwwroot\Images\" + image, @"wwwroot\Images\" + imageName);
+            return imageName;
+        }
+
+        public bool ImageDelete(string image)
+        {
+            if (image != null)
+            {
+                string filePathDelete = Path.Combine(@"wwwroot\Images\", image);
+                if (File.Exists(filePathDelete) && image != null)
+                {
+                    File.Delete(filePathDelete);
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
+    }
+    public static class GuidStringCode
+    {
+        public static string UniqueCodeCreate(this string fileName, string fileExtension = null)
+        {
+            string uz;
+            if (fileExtension != null)
+            {
+                uz = fileExtension;
+            }
+            else
+            {
+                uz = fileName.Substring(fileName.LastIndexOf('.'), fileName.Length - fileName.LastIndexOf('.'));
+            }
+            return Guid.NewGuid().ToString() + uz;
         }
     }
 }

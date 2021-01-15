@@ -31,6 +31,14 @@ namespace Message.Api
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:50000").AllowAnyHeader().AllowAnyMethod();
+                    });
+            });
 
             var messageDB = Configuration.GetConnectionString("MessageDB");
             services.AddDbContext<MessageContext>(opt => opt.UseSqlServer(messageDB));
